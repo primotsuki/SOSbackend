@@ -1,0 +1,15 @@
+{
+    "development":{
+        "username": "root",
+        "password": "161891315",
+        "database" :"test",
+        "host":"localhost",
+        "dialect":"mariadb"
+    },
+    "production":{
+
+    },
+    "test":{
+        
+    }
+}
