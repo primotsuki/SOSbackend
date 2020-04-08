@@ -1,0 +1,21 @@
+type Mascota{
+    id: ID!
+    nombre: String!
+    Caracteristicas: String!
+    fecha_nacimiento: String!
+    color: String!
+    mes_aprox: Int!
+    year_aprox: Int!
+    createdAt: String!
+    UpdatedAt: String!
+    user_id: ID!
+    tipo: [TipoMascota!]
+}
+
+type Query{
+    allMascota: [Mascota!]
+}
+
+type Mutation{
+    saveMascota(user_id:ID!, nombre: String!,fecha_nacimiento: String!, color: String, mes_aprox: Int!, year_aprox: Int!): Mascota!
+}

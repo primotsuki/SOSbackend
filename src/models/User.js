@@ -20,6 +20,14 @@ export default (sequelize, DataTypes) =>{
             allowNull: false
         }
     });
-
+    User.associate = models =>{
+        User.hasMany(models.Mascota,{
+            foreignKey:{
+                name: 'UserId',
+                field: 'user_id'
+            },
+            as: 'mascotas'
+        });
+    };
     return User;
 }

@@ -1,0 +1,10 @@
+type Vacuna{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    allVacuna: [Vacuna!]
+}

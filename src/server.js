@@ -19,7 +19,7 @@ const apollo = new ApolloServer({
 
 const PORT = process.env.PORT || '4000';
 
-models.sequelize.sync({ force: true }).then(()=> {
+models.sequelize.sync().then(()=> {
     apollo.listen(PORT).then(({url}) => {
       console.log(` Servidor corriendo en ${url}`)
     })

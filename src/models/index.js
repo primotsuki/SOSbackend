@@ -19,6 +19,13 @@ if (process.env.DATABASE_URL) {
 
 let db = {
     User: sequelize.import('./User'),
+    Mascota: sequelize.import('./Mascota'),
+    TipoMascota: sequelize.import('./TipoMascota'),
+    Vacuna: sequelize.import('./Vacuna'),
+    VacunasMascota: sequelize.import('./VacunasMascota'),
+    GrupoMantenimiento: sequelize.import('./GrupoMantenimiento'),
+    Mantenimiento: sequelize.import('./Mantenimiento'),
+    MantenimientoMascota: sequelize.import('./MantenimientoMascota'),
 };
 
 Object.keys(db).forEach((modelName) => {
@@ -29,4 +36,4 @@ Object.keys(db).forEach((modelName) => {
 
 db.sequelize = sequelize;
 
-export default db
+export default db;

@@ -1,0 +1,11 @@
+type GrupoMantenimiento{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+    mantenimientos: [Mantenimiento!]
+}
+
+type Query{
+    AllGrupoMantenimiento: [GrupoMantenimiento!]
+}

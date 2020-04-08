@@ -1,0 +1,10 @@
+type TipoMascota{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type query {
+    AllTipo: [TipoMascota!]
+}
