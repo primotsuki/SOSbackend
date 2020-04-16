@@ -30,9 +30,9 @@ export const  tryLogin = async (email, password, models, SECRET) => {
 
 
     const  [token] = await createTokens(user, SECRET)
-
     return {
-        token,
+        user_id: user.id,
+        token: token
     }
 
     

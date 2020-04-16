@@ -8,6 +8,7 @@ type User{
 }
 
 type AuthPayload {
+    user_id: ID!
     token: String!
 }
 
