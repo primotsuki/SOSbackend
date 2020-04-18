@@ -34,27 +34,27 @@ export default (sequelize,DataTypes) => {
     Mascota.associate = models => {
         Mascota.belongsTo(models.User,{
             foreignKey: {
-                name: 'UserId',
+                name: 'user_id',
                 field: 'user_id'
             }
         });
         Mascota.belongsTo(models.TipoMascota, {
             foreignKey: {
-                name: 'tipoId',
+                name: 'tipo_id',
                 field: 'tipo_id'
             },
             as: 'tipo'
         });
         Mascota.hasMany(models.VacunasMascota,{
             foreignKey:{
-                name: 'MascotaId',
+                name: 'mascota_id',
                 field: 'mascota_id'
             },
             as: 'vacunasMascota'
         });
         Mascota.hasMany(models.MantenimientoMascota, {
             foreignKey: {
-                name: 'MascotaId',
+                name: 'mascota_id',
                 field: 'mascota_id'
             },
             as: 'mantenimiento'

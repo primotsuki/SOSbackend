@@ -5,6 +5,6 @@ type TipoMascota{
     updatedAt: String!
 }
 
-type query {
+type Query {
     AllTipo: [TipoMascota!]
 }
