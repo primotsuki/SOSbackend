@@ -8,4 +8,5 @@ type Mantenimiento {
 
 type Query{
     AllMantenimiento: [Mantenimiento!]
+    MantenimientoById(id: ID!): Mantenimiento
 }

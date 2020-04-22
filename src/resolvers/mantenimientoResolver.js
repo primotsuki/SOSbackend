@@ -7,6 +7,13 @@ export default {
                     as: 'grupo'
                 }]
             })
+        },
+        MantenimientoById: (_,args,{models}) =>{
+            return models.Mantenimiento.findOne({
+                where:{
+                    id: args.id
+                }
+            })
         }
     }
 }

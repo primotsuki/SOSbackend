@@ -1,17 +1,31 @@
 type MantenimientoMascota{
-    notas: String!
-    fecha_mantenimiendo: String!
+    id: ID!
+    notas: String
+    fecha_mantenimiento: String!
     recordatorio: Boolean!
     realizado: Boolean!
     mantenimiento: [Mantenimiento!]
+    proximo: String
+    num_prog: Int
+    intervalo_prog: String!
+    programado: Boolean!
     createdAt: String!
     updatedAt: String!
 }
 
 type Query {
-    AllMantenimientoMascota: [MantenimientoMascota!]
+    MantenMascota(mascota_id: ID!, manten_id: ID!): [MantenimientoMascota!]
 }
 
 type Mutation {
-    saveMantenMascota( mascota_id: ID!, notas: String!, fecha_mantenimiento: String!, recordatorio: Boolean): MantenimientoMascota!
+    saveMantenMascota( mascota_id: ID!,
+    mantenimiento_id: ID!
+    notas: String, 
+    fecha_mantenimiento: String!,
+    recordatorio: Boolean!
+    realizado: Boolean!,
+    proximo: String,
+    num_prog: Int,
+    intervalo_prog: String,
+    programado: Boolean!): MantenimientoMascota!
 }
