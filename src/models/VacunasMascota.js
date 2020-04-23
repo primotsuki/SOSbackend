@@ -5,7 +5,7 @@ export default (sequelize, DataTypes) =>{
             type: DataTypes.STRING,
             allowNull: true
         },
-        fecha_Vacuna: {
+        fecha_vacuna: {
             type: DataTypes.DATE,
             allowNull: false
         },
@@ -21,14 +21,14 @@ export default (sequelize, DataTypes) =>{
     VacunasMascota.associate = models => {
         VacunasMascota.belongsTo(models.Vacuna,{
             foreignKey:{
-                name:'VacunaId',
+                name:'vacuna_id',
                 field: 'vacuna_id'
             },
             as: 'vacuna'
         });
         VacunasMascota.belongsTo(models.Mascota,{
             foreignKey:{
-                name: 'MascotaId',
+                name: 'mascota_id',
                 field: 'mascota_id'
             },
             as: 'mascota'

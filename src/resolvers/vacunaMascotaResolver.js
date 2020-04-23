@@ -1,22 +1,28 @@
 export default {
     Query: {
         AllVacunaMascota: (_, args, {models})=>{
-            models.VacunaMascota.findAll({
+            models.VacunasMascota.findAll({
                 include:[{
                     model: models.Vacuna,
                     as: 'vacuna'
                 }]
             })
+        },
+        vacunaByMascota: (_, args, {models}) =>{
+            return models.VacunasMascota.findAll({
+                include:[{
+                    model: models.Vacuna,
+                    as: 'vacuna'
+                }],
+                where:{
+                    mascota_id: args.mascota_id
+                }
+            })
         }
     },
     Mutation: {
         saveVacunaMascota: (_,args, {models}) =>{
-            models.VacunaMascota.findAll(args,{
-                include:[{
-                    model: models.vacuna,
-                    as: 'vacuna'
-                }]
-            })
+            return models.VacunasMascota.create(args)
         }
     }
 }
