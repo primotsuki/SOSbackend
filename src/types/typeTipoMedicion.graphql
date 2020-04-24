@@ -1,0 +1,11 @@
+type TipoMedicion{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+    unidades: [UnidadMedida!]
+}
+
+type Query{
+    tipoMediciones(id: ID!): [TipoMedicion!]
+}

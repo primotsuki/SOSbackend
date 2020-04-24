@@ -1,0 +1,18 @@
+type MedicionMascota{
+    id: ID!
+    valor: Int!
+    notas: String
+    fecha_medicion: String!
+    tipo_medicion: TipoMedicion!
+    unidad: UnidadMedida!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    MedicionesByMascota(mascota_id: ID!, medicion_id: ID!): [MedicionMascota!]
+}
+
+type Mutation{
+    saveMedicionMascota(medicion_id: ID!, mascota_id:ID!,valor: Int! unidad_id:ID!, fecha_medicion: String!, notas: String): MedicionMascota!
+}

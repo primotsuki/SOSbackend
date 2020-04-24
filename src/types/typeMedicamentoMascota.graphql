@@ -1,0 +1,19 @@
+type MedicamentoMascota{
+    id: ID!
+    notas: String!
+    fecha_medicamento: String!
+    recordatorio: Boolean!
+    realizado: Boolean!
+    mascota_id: ID!
+    medicamento_id:ID!
+    medicamento: Medicamento!
+    createdAt: String!
+    updatedAt: String!
+}
+type Query{
+    AllMedicamentoMascota: [MedicamentoMascota!]
+    medicamentoByMascota(mascota_id: ID!): [MedicamentoMascota!]
+}
+type Mutation{
+    saveMedicamentoMascota(medicamento_id: ID!, mascota_id:ID!, fecha_medicamento: String!, recordatorio: Boolean!, realizado: Boolean!, notas: String): MedicamentoMascota
+}

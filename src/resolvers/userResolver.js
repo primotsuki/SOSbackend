@@ -9,7 +9,6 @@ export default {
     Mutation: {
         signup: async (_, args, {models}) => {
             const user = args;
-            console.log(user);
             user.password = await bcrypt. hash(user.password, 12)
             return models.User.create(user)
         },

@@ -1,0 +1,10 @@
+type UnidadMedida{
+    id: ID!
+    unidad: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    Unidades(id: ID!): [UnidadMedida!]
+}

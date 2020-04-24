@@ -26,6 +26,11 @@ let db = {
     GrupoMantenimiento: sequelize.import('./GrupoMantenimiento'),
     Mantenimiento: sequelize.import('./Mantenimiento'),
     MantenimientoMascota: sequelize.import('./MantenimientoMascota'),
+    Medicamento: sequelize.import('./Medicamento'),
+    MedicamentoMascota: sequelize.import('MedicamentoMascota'),
+    UnidadMedida: sequelize.import('./UnidadMedida'),
+    TipoMedicion: sequelize.import('./TipoMedicion'),
+    MedicionMascota:sequelize.import('./MedicionMascota')
 };
 
 Object.keys(db).forEach((modelName) => {

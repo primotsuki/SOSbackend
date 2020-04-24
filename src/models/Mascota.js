@@ -52,6 +52,13 @@ export default (sequelize,DataTypes) => {
             },
             as: 'vacunasMascota'
         });
+        Mascota.hasMany(models.MedicamentoMascota,{
+            foreignKey:{
+                name: 'mascota_id',
+                field: 'mascota_id'
+            },
+            as: 'MedicamentoMascota'
+        });
         Mascota.hasMany(models.MantenimientoMascota, {
             foreignKey: {
                 name: 'mascota_id',
