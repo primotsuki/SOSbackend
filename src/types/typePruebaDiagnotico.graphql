@@ -1,0 +1,16 @@
+type PruebaDiagnostico{
+    id: ID!
+    descripcion: String!
+    notas: String
+    fecha_prueba: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    PruebaByMascota(mascota_id: ID!): [PruebaDiagnostico!]
+}
+
+type Mutation{
+    savePrueba( mascota_id:ID!, fecha_prueba: String!,descripcion: String! notas: String): PruebaDiagnostico!
+}

@@ -1,5 +1,6 @@
 import Sequelize from 'sequelize';
 import path from 'path';
+import pruebaDiagnostico from './pruebaDiagnostico';
 const env = process.env.NODE_ENV || "development";
 const config    = require(path.join(__dirname, '../../', 'config', 'database.json'))[env];
 
@@ -30,7 +31,10 @@ let db = {
     MedicamentoMascota: sequelize.import('MedicamentoMascota'),
     UnidadMedida: sequelize.import('./UnidadMedida'),
     TipoMedicion: sequelize.import('./TipoMedicion'),
-    MedicionMascota:sequelize.import('./MedicionMascota')
+    MedicionMascota:sequelize.import('./MedicionMascota'),
+    PruebaDiagnostico: sequelize.import('./PruebaDiagnostico'),
+    Patologia: sequelize.import('./Patologia'),
+    Alergia: sequelize.import('./Alergia')
 };
 
 Object.keys(db).forEach((modelName) => {

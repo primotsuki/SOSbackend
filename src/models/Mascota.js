@@ -66,6 +66,27 @@ export default (sequelize,DataTypes) => {
             },
             as: 'mantenimiento'
         });
+        Mascota.hasMany(models.PruebaDiagnostico, {
+            foreignKey: {
+                name: 'mascota_id',
+                field: 'mascota_id'
+            },
+            as: 'prueba'
+        });
+        Mascota.hasMany(models.Patologia, {
+            foreignKey: {
+                name: 'mascota_id',
+                field: 'mascota_id'
+            },
+            as: 'patologia'
+        });
+        Mascota.hasMany(models.Alergia, {
+            foreignKey: {
+                name: 'mascota_id',
+                field: 'mascota_id'
+            },
+            as: 'alergia'
+        });
     };
     return Mascota;
 }

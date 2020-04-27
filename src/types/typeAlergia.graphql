@@ -1,0 +1,18 @@
+type Alergia{
+    id: ID!
+    nombre: String!
+    gravedad: String!
+    categoria: String!
+    notas: String
+    fecha_diagnostico: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    AlergiaByMascota(mascota_id: ID!): [Alergia!]
+}
+
+type Mutation{
+    saveAlergia( mascota_id:ID!, fecha_diagnostico: String!,nombre: String!,gravedad: String!,categoria: String! notas: String): Alergia!
+}

@@ -1,0 +1,18 @@
+type Patologia{
+    id: ID!
+    nombre: String!
+    gravedad: String!
+    acciones: String!
+    notas: String
+    fecha: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    PatologiaByMascota(mascota_id: ID!): [Patologia!]
+}
+
+type Mutation{
+    savePatologia( mascota_id:ID!, fecha: String!,nombre: String!,gravedad: String!,acciones: String! notas: String): Patologia!
+}
