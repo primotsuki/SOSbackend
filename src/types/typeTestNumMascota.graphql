@@ -1,0 +1,20 @@
+type TestNumMascota{
+    id: ID!
+    valor: Int!
+    notas: String
+    fecha_test: String!
+    margen_bajo:Int!
+    margen_alto: Int!
+    test: TestNumerico!
+    unidad: UnidadMedida!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    TestNumByMascota(mascota_id: ID!): [TestNumMascota!]
+}
+
+type Mutation{
+    saveTestNumMascota(mascota_id:ID!,test_id: ID!, unidad_id: ID!, valor: Int!, margen_bajo: Int!, margen_alto: Int!, fecha_test: String!, notas: String): TestNumMascota!
+}

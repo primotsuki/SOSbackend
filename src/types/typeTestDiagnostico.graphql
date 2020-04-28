@@ -1,0 +1,10 @@
+type TestDiagnostico{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    allTestDiagnostico: [TestDiagnostico!]
+}

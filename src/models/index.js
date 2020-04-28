@@ -34,7 +34,13 @@ let db = {
     MedicionMascota:sequelize.import('./MedicionMascota'),
     PruebaDiagnostico: sequelize.import('./PruebaDiagnostico'),
     Patologia: sequelize.import('./Patologia'),
-    Alergia: sequelize.import('./Alergia')
+    Alergia: sequelize.import('./Alergia'),
+    TestDiagnostico: sequelize.import('./TestDiagnostico'),
+    TestDiagMascota: sequelize.import('./TestDiagMascota'),
+    TestGenetico: sequelize.import('./TestGenetico'),
+    TestGenMascota: sequelize.import('./TestGenMascota'),
+    TestNumerico: sequelize.import('./TestNumerico'),
+    TestNumMascota: sequelize.import('./TestNumMascota')
 };
 
 Object.keys(db).forEach((modelName) => {

@@ -1,0 +1,10 @@
+type TestNumerico{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    allTestNumerico: [TestNumerico!]
+}

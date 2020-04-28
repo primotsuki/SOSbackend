@@ -1,0 +1,16 @@
+type TestDiagMascota{
+    id: ID!
+    notas: String!
+    fecha_test: String!
+    resultado: String!
+    mascota_id: ID!
+    test: TestDiagnostico!
+    createdAt: String!
+    updatedAt: String!
+}
+type Query{
+    testDiagByMascota(mascota_id: ID!): [TestDiagMascota!]
+}
+type Mutation{
+    saveTestDiagByMascota(test_id: ID!, mascota_id:ID!, fecha_test: String!,resultado: String!, notas: String): TestDiagMascota!
+}
