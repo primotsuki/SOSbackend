@@ -40,7 +40,10 @@ let db = {
     TestGenetico: sequelize.import('./TestGenetico'),
     TestGenMascota: sequelize.import('./TestGenMascota'),
     TestNumerico: sequelize.import('./TestNumerico'),
-    TestNumMascota: sequelize.import('./TestNumMascota')
+    TestNumMascota: sequelize.import('./TestNumMascota'),
+    Cirugia: sequelize.import('./Cirugia'),
+    Suministro: sequelize.import('./Suministro'),
+    ComidaMascota: sequelize.import('./ComidaMascota')
 };
 
 Object.keys(db).forEach((modelName) => {

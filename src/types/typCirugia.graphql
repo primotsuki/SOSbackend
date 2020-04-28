@@ -1,0 +1,19 @@
+type Cirugia{
+    id: ID!
+    nombre: String!
+    tipo_cirugia: String!
+    precio: Int!
+    notas: String
+    fecha: String!
+    observaciones: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    CirugiaByMascota(mascota_id: ID!): [Cirugia!]
+}
+
+type Mutation{
+    saveCirugia( mascota_id:ID!,nombre: String!, fecha: String!,precio: Int!,observaciones: String!, notas: String, tipo_cirugia: String!): Cirugia!
+}

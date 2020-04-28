@@ -1,0 +1,10 @@
+type Suministro{
+    id: ID!
+    descripcion: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+type Query{
+    allSuministro: [Suministro!]
+}
