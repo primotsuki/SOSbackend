@@ -23,6 +23,13 @@ export default {
                     as: 'mantenimiento'
                 }]
             })
+        },
+        editMantenMascota: (_, args, {models}) =>{
+            return models.MantenimientoMascota.update(args,{
+                where: {
+                    id: args.id
+                }
+            })
         }
     }
 }

@@ -23,6 +23,13 @@ export default {
     Mutation: {
         saveVacunaMascota: (_,args, {models}) =>{
             return models.VacunasMascota.create(args)
+        },
+        EditVacunaMascota: (_, args, {models}) => {
+            return models.VacunasMascota.update(args,{
+                where:{
+                    id: args.id
+                }
+            })
         }
     }
 }

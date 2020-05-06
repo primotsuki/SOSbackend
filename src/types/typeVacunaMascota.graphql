@@ -15,5 +15,9 @@ type Query{
     vacunaByMascota(mascota_id: ID!): [VacunaMascota!]
 }
 type Mutation{
-    saveVacunaMascota(vacuna_id: ID!, mascota_id:ID!, fecha_vacuna: String!, recordatorio: Boolean!, realizado: Boolean!, notas: String): VacunaMascota
+    saveVacunaMascota(vacuna_id: ID!,
+     mascota_id:ID!, fecha_vacuna: String!, recordatorio: Boolean!, realizado: Boolean!, notas: String): VacunaMascota!
+    
+    EditVacunaMascota(id: ID!, vacuna_id: ID!,
+    fecha_vacuna: String!, recordatorio: Boolean!, realizado: Boolean!, notas: String): [Updated]
 }

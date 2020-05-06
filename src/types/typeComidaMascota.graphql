@@ -14,5 +14,13 @@ type Query{
     ComidaByMascota(mascota_id: ID!): [ComidaMascota!]
 }
 type Mutation{
-    saveComidaMascota(suministro_id: ID!, mascota_id:ID!, fecha_comida: String!, recordatorio: Boolean!, medida: String!, cantidad: Int!, hora_recordatorio: String! notas: String): ComidaMascota
+    saveComidaMascota(suministro_id: ID!, mascota_id:ID!, fecha_comida: String!, recordatorio: Boolean!, medida: String!, cantidad: Int!, hora_recordatorio: String! notas: String): ComidaMascota!
+    EditComidaMascota(  id: ID!
+                        suministro_id: ID!,
+                        fecha_comida: String!,
+                        recordatorio: Boolean!,
+                        medida: String!,
+                        cantidad: Int!,
+                        hora_recordatorio: String!,
+                        notas: String): Updated
 }

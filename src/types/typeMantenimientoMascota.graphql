@@ -12,6 +12,9 @@ type MantenimientoMascota{
     createdAt: String!
     updatedAt: String!
 }
+type Updated {
+    id: ID
+}
 
 type Query {
     MantenMascota(mascota_id: ID!, manten_id: ID!): [MantenimientoMascota!]
@@ -28,4 +31,15 @@ type Mutation {
     num_prog: Int,
     intervalo_prog: String,
     programado: Boolean!): MantenimientoMascota!
+
+    editMantenMascota(
+    id: ID!
+    notas: String, 
+    fecha_mantenimiento: String!,
+    recordatorio: Boolean!
+    realizado: Boolean!,
+    proximo: String,
+    num_prog: Int,
+    intervalo_prog: String,
+    programado: Boolean!): [Updated]
 }

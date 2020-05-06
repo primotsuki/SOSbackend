@@ -15,6 +15,13 @@ export default {
     Mutation: {
         saveComidaMascota: (_,args, {models}) =>{
             return models.ComidaMascota.create(args)
+        },
+        EditComidaMascota: (_, args, {models}) =>{
+            return models.ComidaMascota.update(args,{
+                where:{
+                    id: args.id
+                }
+            });
         }
     }
 }

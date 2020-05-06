@@ -16,4 +16,10 @@ type Query{
 }
 type Mutation{
     saveMedicamentoMascota(medicamento_id: ID!, mascota_id:ID!, fecha_medicamento: String!, recordatorio: Boolean!, realizado: Boolean!, notas: String): MedicamentoMascota
+    EditMedicamentoMascota( id: ID!,
+                            medicamento_id: ID!,
+                            fecha_medicamento: String!,
+                            recordatorio: Boolean!,
+                            realizado: Boolean!,
+                            notas: String): Updated
 }
